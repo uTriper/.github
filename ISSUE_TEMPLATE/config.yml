@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discusión del Equipo
+    url: https://github.com/utriper/discussions
+    about: Para preguntas generales y discusiones del equipo
+  - name: 🐛 Reporte de Bug
+    url: https://github.com/utriper/com.utriper.bugs/issues/new?labels=bug&template=bug_report.md
+    about: Reportar un error o problema
+  - name: 📖 Documentación
+    url: https://github.com/utriper/com.utriper.docs
+    about: Consultar documentación del proyecto

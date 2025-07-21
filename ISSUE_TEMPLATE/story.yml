@@ -1,0 +1,124 @@
+name: 📖 Story de Usuario
+description: Crear una nueva Story de Usuario
+title: "[STORY] Como [usuario], quiero [acción] para [beneficio]"
+labels: ["story"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📖 Nueva Story de Usuario
+        Describe una funcionalidad específica desde la perspectiva del usuario.
+
+  - type: textarea
+    id: user_story
+    attributes:
+      label: 📝 Story de Usuario
+      description: Describe la funcionalidad en formato de story de usuario
+      placeholder: |
+        **Como** [tipo de usuario]
+        **Quiero** [algún objetivo/funcionalidad]
+        **Para** [alguna razón/beneficio]
+
+        Ejemplo:
+        **Como** usuario nuevo del sistema
+        **Quiero** crear una cuenta con mi email
+        **Para** poder acceder a funciones personalizadas
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: ✅ Criterios de Aceptación
+      description: Define qué condiciones deben cumplirse para considerar la story completa
+      placeholder: |
+        **Dado que** [contexto inicial]
+        **Cuando** [se realiza una acción]
+        **Entonces** [resultado esperado]
+
+        **Criterios Adicionales:**
+        - [ ] La validación de email funciona correctamente
+        - [ ] Los mensajes de error son claros
+        - [ ] El diseño es responsivo en móvil
+    validations:
+      required: true
+
+  - type: dropdown
+    id: story_points
+    attributes:
+      label: 📊 Story Points
+      description: Estima la complejidad de esta story
+      options:
+        - "1 - Trivial (1-2 horas)"
+        - "2 - Simple (medio día)"
+        - "3 - Fácil (1 día)"
+        - "5 - Media (2-3 días)"
+        - "8 - Compleja (4-5 días)"
+        - "13 - Muy Compleja (1-2 semanas)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: 🎯 Complejidad Técnica
+      description: ¿Qué tan compleja es técnicamente?
+      options:
+        - Simple (patrones conocidos)
+        - Media (requiere investigación)
+        - Compleja (nueva tecnología/arquitectura)
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: technical_areas
+    attributes:
+      label: 🔧 Áreas Técnicas Involucradas
+      description: ¿Qué partes del sistema se verán afectadas?
+      options:
+        - label: Frontend (UI/UX)
+        - label: Backend (API/Lógica)
+        - label: Base de Datos
+        - label: DevOps/Infraestructura
+        - label: Testing/QA
+        - label: Documentación
+
+  - type: textarea
+    id: technical_requirements
+    attributes:
+      label: 🛠️ Requisitos Técnicos
+      description: Especifica los requisitos técnicos detallados
+      placeholder: |
+        **Frontend:**
+        - Componente React responsivo
+        - Validación en tiempo real
+
+        **Backend:**
+        - Endpoint POST /api/usuarios
+        - Validación de datos de entrada
+
+        **Performance:**
+        - Tiempo de respuesta <2 segundos
+
+  - type: input
+    id: related_epic
+    attributes:
+      label: 🔗 Epic Relacionado
+      description: ¿A qué epic pertenece esta story? (número de issue)
+      placeholder: "#123"
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: ⚠️ Dependencias
+      description: ¿Esta story depende de otras historias o tareas?
+      placeholder: |
+        - #124 - Configuración de base de datos
+        - #125 - Servicio de email
+
+  - type: textarea
+    id: additional_notes
+    attributes:
+      label: 📝 Notas Adicionales
+      description: Cualquier información adicional relevante
+      placeholder: Enlaces a diseños, referencias técnicas, consideraciones especiales...

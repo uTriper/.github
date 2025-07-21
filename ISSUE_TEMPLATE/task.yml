@@ -1,0 +1,153 @@
+name: ⚙️ Task de Desarrollo
+description: Crear una nueva task técnica
+title: "[TASK] [Acción] [Componente] - [Detalle]"
+labels: ["task"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⚙️ Nueva Task de Desarrollo
+        Define una unidad específica de trabajo técnico.
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: 🎯 Objetivo
+      description: ¿Qué cosa específica necesita ser construida/arreglada/implementada?
+      placeholder: |
+        Crear componente reutilizable de React para formulario de registro que incluya validación en tiempo real y manejo de errores.
+    validations:
+      required: true
+
+  - type: textarea
+    id: detailed_requirements
+    attributes:
+      label: 📋 Requisitos Detallados
+      description: Lista específica de lo que debe implementarse
+      placeholder: |
+        **Lo que necesita hacerse:**
+        - [ ] Crear componente RegistrationForm.jsx
+        - [ ] Implementar campos email, password, confirmPassword
+        - [ ] Añadir validación en tiempo real
+        - [ ] Manejar estados de loading y error
+
+        **Especificaciones Técnicas:**
+        - Archivo: `src/components/auth/RegistrationForm.jsx`
+        - Props: `onSubmit`, `isLoading`, `errors`
+        - Hooks: useState para manejo de estado local
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: ✅ Criterios de Aceptación
+      description: ¿Cómo sabremos que la task está completa?
+      placeholder: |
+        - [ ] Componente renderiza correctamente con todos los campos
+        - [ ] Validación de email muestra errores para formatos inválidos
+        - [ ] Botón submit se deshabilita cuando hay errores
+        - [ ] Estados de loading se muestran durante envío
+    validations:
+      required: true
+
+  - type: dropdown
+    id: estimated_time
+    attributes:
+      label: ⏱️ Estimación de Tiempo
+      description: ¿Cuánto tiempo tomará completar esta task?
+      options:
+        - "1-2 horas"
+        - "3-4 horas"
+        - "5-6 horas"
+        - "7-8 horas"
+        - "Más de 8 horas (dividir en tareas más pequeñas)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: 📊 Complejidad
+      description: ¿Qué tan compleja es esta task?
+      options:
+        - Simple (patrones conocidos, implementación directa)
+        - Media (requiere investigación o nuevos conceptos)
+        - Compleja (arquitectura nueva o tecnología desconocida)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: developer_level
+    attributes:
+      label: 👥 Nivel Sugerido
+      description: ¿Qué nivel de experiencia se necesita?
+      options:
+        - Good first Issue (buena para aprender)
+        - Challenge ahead (talvéz necesita guía)
+        - Lead Required (complejidad alta)
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: tech_stack
+    attributes:
+      label: 🛠️ Stack Tecnológico
+      description: ¿Qué tecnologías se utilizarán?
+      options:
+        - label: React/JavaScript
+        - label: Node.js/Express
+        - label: Database (SQL/NoSQL)
+        - label: CSS/Styling
+        - label: Testing (Jest/Cypress)
+        - label: DevOps/Deployment
+
+  - type: textarea
+    id: testing_required
+    attributes:
+      label: 🧪 Testing Requerido
+      description: ¿Qué pruebas deben escribirse?
+      placeholder: |
+        **Pruebas Unitarias:**
+        - [ ] Validación de formato de email
+        - [ ] Manejo de errores de API
+
+        **Pruebas de Integración:**
+        - [ ] Flujo completo de registro
+
+        **Pruebas Manuales:**
+        - [ ] Verificar en Chrome, Firefox, Safari
+        - [ ] Probar en dispositivo móvil
+
+  - type: input
+    id: parent_story
+    attributes:
+      label: 🔗 Story Padre
+      description: ¿A qué story pertenece esta task? (número de issue)
+      placeholder: "#123"
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: ⚠️ Dependencias
+      description: ¿Esta task depende de otras tareas?
+      placeholder: |
+        - #124 - API endpoint debe estar completo
+        - #125 - Diseño UI debe estar aprobado
+
+  - type: textarea
+    id: references
+    attributes:
+      label: 📚 Referencias y Recursos
+      description: Enlaces útiles, documentación, ejemplos
+      placeholder: |
+        - Diseño Figma: [enlace]
+        - Documentación de API: [enlace]
+        - Componente similar existente: src/components/LoginForm.jsx
+
+  - type: input
+    id: deadline
+    attributes:
+      label: 📅 Fecha Límite Sugerida
+      description: ¿Cuándo debería completarse esta task?
+      placeholder: "2025-08-15"
