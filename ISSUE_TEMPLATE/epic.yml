@@ -3,7 +3,7 @@ description: Crear un nuevo Epic para funcionalidades principales
 title: "[EPIC] [Área de Negocio] - [Resultado]"
 labels: ["epic", "priority-medium"]
 assignees:
-  - lead-username
+  - bautista-coll
 body:
   - type: markdown
     attributes:
