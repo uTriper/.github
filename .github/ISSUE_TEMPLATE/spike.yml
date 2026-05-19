@@ -1,0 +1,77 @@
+name: Spike (research)
+description: Investigación time-boxed. Output = decisión, no código.
+title: "SPIKE: <pregunta a responder>"
+labels: ["spike"]
+type: Spike
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Spike
+        Investigación time-boxed. Output = decisión / recomendación / conocimiento. **NO código entregable.**
+        Usás Spike cuando "no sabemos suficiente para estimar / diseñar / comprometer."
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Pregunta a responder
+      description: Qué decisión específica queremos poder tomar después
+      placeholder: ej. ¿Qué library de date-time uso — luxon, date-fns, dayjs?
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Por qué necesita research
+      description: Qué nos impide estimar / diseñar / comprometer hoy
+    validations:
+      required: true
+
+  - type: dropdown
+    id: time-box
+    attributes:
+      label: Time-box máximo
+      options:
+        - 2 horas
+        - 1 día
+        - 2 días
+        - 3 días
+    validations:
+      required: true
+
+  - type: dropdown
+    id: output-type
+    attributes:
+      label: Tipo de output esperado
+      options:
+        - ADR (decisión documentada)
+        - Recomendación + comparación
+        - Prototipo / PoC
+        - Capacity / performance assessment
+        - Library / tool pick
+        - Otro
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Cómo sabemos que el spike está done
+      placeholder: |
+        - [ ] ADR escrito y mergeado
+        - [ ] Decisión comunicada al team
+    validations:
+      required: true
+
+  - type: input
+    id: linked-work
+    attributes:
+      label: Story / Epic bloqueado (opcional)
+      placeholder: ej. #234
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notas / hipótesis / opciones a evaluar

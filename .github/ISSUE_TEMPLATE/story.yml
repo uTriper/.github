@@ -1,6 +1,6 @@
 name: 📖 Story de Usuario
 description: Crear una nueva Story de Usuario
-title: "[STORY] Como [usuario], quiero [acción] para [beneficio]"
+title: "STORY: Como [usuario], quiero [acción] para [beneficio]"
 labels: ["story"]
 body:
   - type: markdown

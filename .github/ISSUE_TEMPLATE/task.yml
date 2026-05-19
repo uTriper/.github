@@ -1,6 +1,6 @@
 name: ⚙️ Task de Desarrollo
 description: Crear una nueva task técnica
-title: "[TASK] [Acción] [Componente] - [Detalle]"
+title: "TASK: [Acción] [Componente] - [Detalle]"
 labels: ["task"]
 body:
   - type: markdown

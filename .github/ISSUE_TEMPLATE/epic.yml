@@ -1,6 +1,6 @@
 name: 📚 Epic
 description: Crear un nuevo Epic para funcionalidades principales
-title: "[EPIC] [Área de Negocio] - [Resultado]"
+title: "EPIC: [Área de Negocio] - [Resultado]"
 labels: ["epic", "priority-medium"]
 assignees:
   - bautista-coll

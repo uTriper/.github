@@ -1,0 +1,94 @@
+name: Feature request
+description: Nuevo pedido o mejora desde fuera del team tech
+title: "FEAT: <qué se pide>"
+labels: ["enhancement"]
+type: Feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Triage minimum
+        Las dos siguientes son **requeridas para crear**.
+        El resto se completa al promover a Story.
+
+  - type: textarea
+    id: request
+    attributes:
+      label: Qué se está pidiendo
+      description: 1-2 frases. La cosa específica que solicitan.
+      placeholder: ej. Filtrar bookings por método de pago
+    validations:
+      required: true
+
+  - type: dropdown
+    id: source
+    attributes:
+      label: Canal / fuente
+      options:
+        - Cliente
+        - Sales
+        - Customer Success
+        - Discord
+        - WhatsApp / WA Business
+        - Partner (Viator / GYG / OCTO / Chubb / LimeBridge)
+        - Equipo interno
+        - Idea propia
+        - Otro
+    validations:
+      required: true
+
+  - type: input
+    id: requested-by
+    attributes:
+      label: Quién lo pidió específicamente (opcional)
+      placeholder: ej. cliente Toto, equipo Customer Success, etc
+
+  - type: input
+    id: source-link
+    attributes:
+      label: Link al mensaje original (opcional)
+      description: Discord, Slack, email permalink, etc.
+      placeholder: https://discord.com/channels/...
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ## Required para promover a Story (Backlog)
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema que resuelve
+      description: NO la solución propuesta — el dolor real
+      placeholder: ej. El usuario filtra manualmente 200+ bookings cada mañana
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Workaround actual (si hay)
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Tipo de impacto
+      multiple: true
+      options:
+        - Revenue (nuevo o retenido)
+        - Retention / NPS
+        - Operational efficiency
+        - Developer experience
+        - Compliance / legal
+        - Strategic (OKR)
+        - Quality of life
+
+  - type: input
+    id: deadline
+    attributes:
+      label: Presión externa / deadline (si hay)
+      placeholder: ej. cliente firma si está antes de junio
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notas / related issues

@@ -1,0 +1,90 @@
+name: Bug report
+description: Algo no funciona como debería
+title: "BUG: <descripción breve>"
+labels: ["bug"]
+type: Bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Triage minimum
+        Las dos siguientes son **requeridas para crear**.
+        El resto se completa al promover a Backlog (o ahora si tenés contexto).
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Qué pasó
+      description: 1-2 frases describiendo el problema
+      placeholder: ej. El checkout no permite seleccionar productos activos
+    validations:
+      required: true
+
+  - type: textarea
+    id: where-seen
+    attributes:
+      label: Dónde lo viste
+      description: Discord / email / test propio / reporte de cliente — link o screenshot
+    validations:
+      required: true
+
+  - type: input
+    id: source-link
+    attributes:
+      label: Link al mensaje original (opcional)
+      description: Discord, Slack, email permalink, etc.
+      placeholder: https://discord.com/channels/...
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ## Required para promover a Backlog (opcional al crear)
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Cómo reproducirlo
+      placeholder: |
+        1. Abrir la app
+        2. Ir a checkout
+        3. Click en X
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Qué esperabas que pase
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Qué pasó realmente
+
+  - type: input
+    id: affected
+    attributes:
+      label: Usuario / cliente afectado
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Frecuencia
+      options:
+        - Siempre
+        - Intermitente
+        - Una vez
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severidad
+      options:
+        - Bloqueante
+        - Degradación
+        - Cosmético
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notas
+      description: Contexto, hipótesis, related issues
